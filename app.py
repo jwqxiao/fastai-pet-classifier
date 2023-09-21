@@ -22,10 +22,9 @@ title = "Pet Breed Classifier"
 description = """A pet breed classifier trained on the Oxford Pets dataset with fastai.
                 Created as a demo for Gradio and HuggingFace Spaces. """
 interpretation = 'default'
-enable_queue = True
 
 demo2 = gr.Interface(fn=predict, inputs=gr.inputs.Image(shape=(512, 512)),
              outputs=gr.outputs.Label(num_top_classes=3),
                      title=title, description=description,
-                     interpretation=interpretation, enable_queue=enable_queue)
-demo2.launch(share=True)
+                     interpretation=interpretation)
+demo2.launch(inline=False)
